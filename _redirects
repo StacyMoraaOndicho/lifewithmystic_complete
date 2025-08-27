@@ -1,1 +1,8 @@
-/admin    /admin/index.html   200
+# Netlify CMS admin
+/admin/*   /admin/index.html   200
+
+# Root URL → admin
+/         /admin/index.html   200
+
+# Catch-all fallback for any other routes
+/*       /admin/index.html   200
