@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Pilgrim's Dawn",
+    "date": "2025-08-18",
+    "category": "journal",
+    "tags": [
+      "journal",
+      "morning"
+    ],
+    "excerpt": "Notes from a gentle morning where coffee tasted like courage.",
+    "url": "/posts/pilgrims-dawn/index.html"
+  },
+  {
+    "title": "Embers of Burgundy",
+    "date": "2025-08-20",
+    "category": "poetry",
+    "tags": [
+      "poem",
+      "night",
+      "embers"
+    ],
+    "excerpt": "A short poem about warm nights and smoldering thoughts.",
+    "url": "/posts/embers-of-burgundy/index.html"
+  }
+]

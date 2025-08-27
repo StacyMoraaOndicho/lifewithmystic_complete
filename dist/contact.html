@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · lifewithmystic</title>
+<meta name="description" content="Say hi.">
+<meta property="og:title" content="Contact · lifewithmystic">
+<meta property="og:description" content="Say hi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/contact.html">
+<meta property="og:image" content="/assets/img/og.jpg">
+<link rel="icon" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="navbar container">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="title">lifewithmystic</div>
+        <div class="tagline">mystical life with a pilgrim</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a class="navlink" href="/">Home</a>
+      <a class="navlink" href="/about.html">About</a>
+      <a class="navlink" href="/category/poetry/index.html">Poetry</a>
+      <a class="navlink" href="/category/journal/index.html">Journal</a>
+      <a class="navlink" href="/quotes.html">Quotes</a>
+      <a class="navlink" href="/search.html">Search</a>
+      <button id="mode-toggle" class="toggle" aria-label="Toggle dark/light">☾</button>
+    </nav>
+  </div>
+</header>
+
+
+<section class="container">
+  <h1>Contact</h1>
+  <div class="tile" style="padding:20px">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <p><label>Your Name<br><input name="name" required></label></p>
+      <p><label>Your Email<br><input type="email" name="email" required></label></p>
+      <p><label>Message<br><textarea name="message" rows="5" required></textarea></label></p>
+      <p><button class="navlink" type="submit">Send</button></p>
+    </form>
+  </div>
+</section>
+
+
+<footer class="footer container">
+  <div>© 2025 lifewithmystic · Made with ✨ by Stacy</div>
+  <div>
+    <span class="badge"><a href="mailto:hello@example.com">Email</a></span>
+    <span class="badge"><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></span>
+    <span class="badge"><a href="https://x.com" target="_blank" rel="noopener">X</a></span>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

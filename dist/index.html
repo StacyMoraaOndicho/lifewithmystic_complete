@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lifewithmystic</title>
+<meta name="description" content="Mystical life with a pilgrim — poetry and journal.">
+<meta property="og:title" content="lifewithmystic">
+<meta property="og:description" content="Mystical life with a pilgrim — poetry and journal.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com">
+<meta property="og:image" content="/assets/img/og.jpg">
+<link rel="icon" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="navbar container">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="title">lifewithmystic</div>
+        <div class="tagline">mystical life with a pilgrim</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a class="navlink" href="/">Home</a>
+      <a class="navlink" href="/about.html">About</a>
+      <a class="navlink" href="/category/poetry/index.html">Poetry</a>
+      <a class="navlink" href="/category/journal/index.html">Journal</a>
+      <a class="navlink" href="/quotes.html">Quotes</a>
+      <a class="navlink" href="/search.html">Search</a>
+      <button id="mode-toggle" class="toggle" aria-label="Toggle dark/light">☾</button>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero container">
+  <div class="hero-inner">
+    <div class="hero-card">
+      <h1>Welcome to lifewithmystic</h1>
+      <p>Stories, poems, and pilgrim-thoughts — wrapped in burgundy, steeped in wonder.</p>
+    </div>
+    <div class="hero-card">
+      <div class="badge">New</div>
+      <p>Browse by category, search posts, or just wander. May the right words find you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="grid" id="home-grid">
+    <a class="tile big" href="/category/poetry/index.html">
+      <div class="cover"></div>
+      <div class="content">
+        <div class="meta">Category</div>
+        <h3>Poetry</h3>
+        <p class="meta">Verse that glows like embers.</p>
+      </div>
+    </a>
+    <a class="tile" href="/category/journal/index.html">
+      <div class="cover"></div>
+      <div class="content">
+        <div class="meta">Category</div>
+        <h3>Journal</h3>
+        <p class="meta">Fragments of days and nights.</p>
+      </div>
+    </a>
+    <a class="tile" href="/quotes.html">
+      <div class="cover"></div>
+      <div class="content">
+        <div class="meta">Feature</div>
+        <h3>Mystical Quotes</h3>
+        <p class="meta">Themed lines between the tiles.</p>
+      </div>
+    </a>
+    <div class="quote" id="quote-box">“We are all pilgrims on the same journey—but some pilgrims have better roadmaps.” — Nelson DeMille</div>
+  </div>
+</section>
+
+<script>
+const quotes = [
+  "“The wound is the place where the Light enters you.” — Rumi",
+  "“I am seeking, I am striving, I am in it with all my heart.” — Van Gogh",
+  "“The universe is not outside of you. Look inside yourself; everything that you want, you already are.” — Rumi",
+  "“And you? When will you begin that long journey into yourself?” — Rumi"
+];
+const qb = document.getElementById('quote-box');
+if(qb){ qb.textContent = quotes[Math.floor(Math.random()*quotes.length)]; }
+</script>
+
+
+<footer class="footer container">
+  <div>© 2025 lifewithmystic · Made with ✨ by Stacy</div>
+  <div>
+    <span class="badge"><a href="mailto:hello@example.com">Email</a></span>
+    <span class="badge"><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></span>
+    <span class="badge"><a href="https://x.com" target="_blank" rel="noopener">X</a></span>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<section class="hero container">
+  <div class="hero-inner">
+    <div class="hero-card">
+      <h1>Welcome to lifewithmystic</h1>
+      <p>Stories, poems, and pilgrim-thoughts — wrapped in burgundy, steeped in wonder.</p>
+    </div>
+    <div class="hero-card">
+      <div class="badge">New</div>
+      <p>Browse by category, search posts, or just wander. May the right words find you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="grid" id="home-grid">
+    <a class="tile big" href="/category/poetry/index.html">
+      <div class="cover"></div>
+      <div class="content">
+        <div class="meta">Category</div>
+        <h3>Poetry</h3>
+        <p class="meta">Verse that glows like embers.</p>
+      </div>
+    </a>
+    <a class="tile" href="/category/journal/index.html">
+      <div class="cover"></div>
+      <div class="content">
+        <div class="meta">Category</div>
+        <h3>Journal</h3>
+        <p class="meta">Fragments of days and nights.</p>
+      </div>
+    </a>
+    <a class="tile" href="/quotes.html">
+      <div class="cover"></div>
+      <div class="content">
+        <div class="meta">Feature</div>
+        <h3>Mystical Quotes</h3>
+        <p class="meta">Themed lines between the tiles.</p>
+      </div>
+    </a>
+    <div class="quote" id="quote-box">“We are all pilgrims on the same journey—but some pilgrims have better roadmaps.” — Nelson DeMille</div>
+  </div>
+</section>
+
+<script>
+const quotes = [
+  "“The wound is the place where the Light enters you.” — Rumi",
+  "“I am seeking, I am striving, I am in it with all my heart.” — Van Gogh",
+  "“The universe is not outside of you. Look inside yourself; everything that you want, you already are.” — Rumi",
+  "“And you? When will you begin that long journey into yourself?” — Rumi"
+];
+const qb = document.getElementById('quote-box');
+if(qb){ qb.textContent = quotes[Math.floor(Math.random()*quotes.length)]; }
+</script>

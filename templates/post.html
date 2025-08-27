@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title} · lifewithmystic</title>
+<meta name="description" content="{description}">
+<link rel="icon" href="/assets/img/favicon.png">
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="/assets/img/og.jpg">
+</head>
+<body>
+<header class="header">
+  <div class="navbar container">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="title">lifewithmystic</div>
+        <div class="tagline">mystical life with a pilgrim</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a class="navlink" href="/">Home</a>
+      <a class="navlink" href="/about.html">About</a>
+      <a class="navlink" href="/category/{category}/index.html">{Category}</a>
+      <a class="navlink" href="/search.html">Search</a>
+      <button id="mode-toggle" class="toggle" aria-label="Toggle dark/light">☾</button>
+    </nav>
+  </div>
+</header>
+
+<article class="post">
+  <h1>{title}</h1>
+  <div class="info">{date} · {category}</div>
+  <div class="card">{content}</div>
+  <p class="info">Tags: {tags}</p>
+  <div style="display:flex; gap:8px; margin:12px 0;">
+    <button class="navlink" onclick="share('twitter', location.href, document.title)">Share on X</button>
+    <button class="navlink" onclick="share('whatsapp', location.href, document.title)">Share on WhatsApp</button>
+    <button class="navlink" onclick="share('facebook', location.href, document.title)">Share on Facebook</button>
+  </div>
+</article>
+
+<footer class="footer container">
+  <div>© {year} lifewithmystic</div>
+  <div><a class="badge" href="/search.html">Explore</a></div>
+</footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
