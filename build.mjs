@@ -110,3 +110,14 @@ await fs.writeFile(`${dist}/about.html`, renderBase('About · lifewithmystic', '
 
 const contactBody = await fs.readFile(root + 'templates/contact-body.html', 'utf8');
 await fs.writeFile(`${dist}/contact.html`, renderBase('Contact · lifewithmystic', 'Say hi.', site.url + '/contact.html', contactBody), 'utf8');
+
+// Copy admin and redirects into dist so Netlify CMS works
+const adminDir = root + 'admin';
+if (await fs.pathExists(adminDir)) {
+  await fs.copy(adminDir, dist + '/admin');
+}
+// Ensure Netlify redirects file is in publish dir
+const redirectsFile = root + '_redirects';
+if (await fs.pathExists(redirectsFile)) {
+  await fs.copy(redirectsFile, dist + '/_redirects');
+}
