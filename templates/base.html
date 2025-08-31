@@ -13,9 +13,9 @@
 <link rel="icon" href="/assets/img/favicon.png">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body class="fade-in">
 <header class="header">
-  <div class="navbar container">
+  <div class="navbar container glass">
     <div class="brand">
       <div class="logo"></div>
       <div>
@@ -45,6 +45,24 @@
     <span class="badge"><a href="https://x.com" target="_blank" rel="noopener">X</a></span>
   </div>
 </footer>
+<script src="/assets/js/main.js"></script>
+
+<div class="fab" aria-label="Quick socials">
+  <a class="fab-btn" href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">IG</a>
+  <a class="fab-btn" href="https://x.com" target="_blank" rel="noopener" title="X">X</a>
+  <a class="fab-btn" href="mailto:hello@example.com" title="Email">@</a>
+</div>
+
+<div id="welcome-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+  <div class="modal glass">
+    <h3 id="welcome-title">Welcome, pilgrim ✨</h3>
+    <p>Enjoy the new glowing UI — try the dark/light toggle, hover the tiles, and explore.</p>
+    <div class="actions">
+      <button class="button" id="close-modal">Got it</button>
+    </div>
+  </div>
+</div>
+
 <script src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -50,3 +50,49 @@ function share(platform, url, title){
   if(platform==='facebook'){ shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${u}`; }
   window.open(shareUrl, '_blank');
 }
+
+// Persist theme and reflect icon
+(function(){
+  const btn = document.getElementById('mode-toggle');
+  if(!btn) return;
+  let dark = localStorage.getItem('theme') !== 'light';
+  function apply(){
+    document.documentElement.style.setProperty('--bg', dark ? '#0f0a0a' : '#faf8f7');
+    document.documentElement.style.setProperty('--bg-soft', dark ? '#1a1111' : '#ffffff');
+    document.documentElement.style.setProperty('--text', dark ? '#f2e9e4' : '#1b1b1b');
+    document.documentElement.style.setProperty('--muted', dark ? '#c9b7b1' : '#4b4b4b');
+    document.documentElement.style.setProperty('--card', dark ? '#140d0d' : '#ffffff');
+    btn.textContent = dark ? '☾' : '☀';
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+  apply();
+  btn.addEventListener('click', ()=>{ dark = !dark; apply(); });
+})();
+
+// Intersection-based reveal
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  const obs = new IntersectionObserver((entries)=>{
+    for(const e of entries){
+      if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); }
+    }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.fade-in, .tile, .card, .hero-card').forEach(el=>obs.observe(el));
+})();
+
+// Modal popup (once per session)
+(function(){
+  const overlay = document.getElementById('welcome-modal');
+  const btn = document.getElementById('close-modal');
+  if(!overlay || !btn) return;
+  if(sessionStorage.getItem('welcomed')) return;
+  setTimeout(()=>{
+    overlay.classList.add('show');
+    overlay.querySelector('.modal').classList.add('show');
+  }, 900);
+  function close(){
+    overlay.classList.remove('show');
+  }
+  overlay.addEventListener('click', (e)=>{ if(e.target === overlay) close(); });
+  btn.addEventListener('click', ()=>{ close(); sessionStorage.setItem('welcomed','1'); });
+})();
